@@ -6,8 +6,6 @@
 
 BlenderNekoVM::BlenderNekoVM()
 {
-     auto *x = new BlenderNekoVM();
-
     if (_numVMs == 0) {
         _numVMs = 1;
         neko_global_init();
@@ -15,7 +13,7 @@ BlenderNekoVM::BlenderNekoVM()
         _numVMs++;
     }
     neko_vm *vm = neko_vm_alloc(NULL);       
-    x->_pVM = vm;
+    _pVM = vm;
     neko_vm_select(vm);
 
     _pBlenderInterface = new BlenderHaxe();
