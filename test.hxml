@@ -1,0 +1,8 @@
+
+
+
+-cp .
+-cp ./haxe
+--neko bin/test.n
+--main test.Test
+
